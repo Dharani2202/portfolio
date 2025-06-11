@@ -1,43 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Freelancer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharani Sukumar - Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Freelancer</p>
-  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Portfolio</div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a passionate freelancer helping clients build great websites and apps. Let's work together!</p>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Hi, I'm <span class="accent">Dharani Sukumar</span></h1>
+        <p class="hero-subtitle">.NET Backend Developer & Database Specialist</p>
+        <p class="hero-description">I build robust, scalable backend systems and design efficient database solutions using .NET technologies and SQL Server.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-placeholder">
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+    </section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>💻 Web Design</li>
-      <li>📱 Responsive Development</li>
-      <li>🛠️ Maintenance & Support</li>
-    </ul>
-  </section>
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>I'm a passionate .NET backend developer with expertise in building enterprise-level applications and designing robust database architectures. I specialize in creating scalable APIs, optimizing database performance, and implementing secure backend solutions.</p>
+            <p>With strong experience in C#, ASP.NET Core, Entity Framework, and SQL Server, I focus on delivering high-performance backend systems that power modern applications.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <h3>50+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="stat">
+                <h3>3+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat">
+                <h3>100%</h3>
+                <p>Client Satisfaction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Coming soon...</p>
-  </section>
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-server"></i>
+            </div>
+            <div class="project-content">
+              <h3>Enterprise ERP System API</h3>
+              <p>A comprehensive RESTful API built with ASP.NET Core for an enterprise resource planning system. Features include JWT authentication, role-based authorization, and complex business logic implementation.</p>
+              <div class="project-tech">
+                <span>ASP.NET Core</span>
+                <span>Entity Framework</span>
+                <span>SQL Server</span>
+                <span>JWT</span>
+              </div>
+              <div class="project-links">
+                <a href="api-demo.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/DharaniSukumar/enterprise-erp-api.git" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-  </section>
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="project-content">
+              <h3>Inventory Management System</h3>
+              <p>A robust backend system for inventory management with complex database relationships, stored procedures, and real-time stock tracking. Implemented with clean architecture principles.</p>
+              <div class="project-tech">
+                <span>C#</span>
+                <span>ASP.NET Web API</span>
+                <span>SQL Server</span>
+                <span>Stored Procedures</span>
+              </div>
+              <div class="project-links">
+                <a href="inventory-demo.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/dharanisukumar/inventory-management-api" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
 
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="project-content">
+              <h3>Financial Reporting API</h3>
+              <p>High-performance API for generating complex financial reports with advanced SQL queries, data aggregation, and export functionality. Optimized for handling large datasets efficiently.</p>
+              <div class="project-tech">
+                <span>.NET 8</span>
+                <span>Dapper</span>
+                <span>SQL Server</span>
+                <span>Azure SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="financial-demo.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/dharanisukumar/financial-reporting-api" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>.NET Technologies</h3>
+            <div class="skill-items">
+              <span class="skill-item">C#</span>
+              <span class="skill-item">ASP.NET Core</span>
+              <span class="skill-item">ASP.NET Web API</span>
+              <span class="skill-item">Entity Framework</span>
+              <span class="skill-item">.NET 8</span>
+              <span class="skill-item">LINQ</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Database & Data</h3>
+            <div class="skill-items">
+              <span class="skill-item">SQL Server</span>
+              <span class="skill-item">T-SQL</span>
+              <span class="skill-item">Stored Procedures</span>
+              <span class="skill-item">Database Design</span>
+              <span class="skill-item">Azure SQL</span>
+              <span class="skill-item">Dapper</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Cloud</h3>
+            <div class="skill-items">
+              <span class="skill-item">Visual Studio</span>
+              <span class="skill-item">Git</span>
+              <span class="skill-item">Azure</span>
+              <span class="skill-item">REST APIs</span>
+              <span class="skill-item">Postman</span>
+              <span class="skill-item">SSMS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's work together!</h3>
+            <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to
+              collaborate.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>dharani.sukumar@example.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Macclesfield, United Kingdom</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/dharanisukumar" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/in/dharani-sukumar" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/dharanisukumar" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com/dharanisukumar" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Dharani Sukumar. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
