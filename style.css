@@ -1,18 +1,29 @@
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Hamburger and Mobile Menu Logic */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
 }
-a {
-  text-decoration: none;
-  color: inherit;
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
 }
-ul {
-  list-style: none
