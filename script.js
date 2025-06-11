@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const skillCategories = document.querySelectorAll('.skill-category');
   const socialLinks = document.querySelectorAll('.social-link');
 
+  // Make navbar fixed by adding CSS dynamically (optional, add to your CSS instead)
+  if (navbar) {
+    navbar.style.position = 'fixed';
+    navbar.style.top = '0';
+    navbar.style.left = '0';
+    navbar.style.width = '100%';
+    navbar.style.zIndex = '999';
+    navbar.style.transition = 'background 0.3s ease, box-shadow 0.3s ease';
+  }
+
   // Mobile Navigation Toggle
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', function() {
@@ -43,8 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Navbar background color on scroll
-  window.addEventListener('scroll', function() {
+  // Navbar background color on scroll and on page load
+  function updateNavbarBackground() {
     if (!navbar) return;
     if (window.scrollY > 50) {
       navbar.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -53,7 +63,10 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.style.background = 'rgba(255, 255, 255, 0.95)';
       navbar.style.boxShadow = 'none';
     }
-  });
+  }
+
+  window.addEventListener('scroll', updateNavbarBackground);
+  updateNavbarBackground(); // Run once on load to set initial state
 
   // Contact form submit handler
   if (contactForm) {
